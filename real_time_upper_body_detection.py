@@ -3,6 +3,7 @@ import imutils
 
 haar_upper_body_cascade = cv2.CascadeClassifier("data/haarcascade_upperbody.xml")
 full_body_cascade = cv2.CascadeClassifier("data/haarcascade_fullbody.xml")
+full_body_cascade = cv2.CascadeClassifier("data/haarcascade_fullbody.xml")
 
 # Uncomment this for real-time webcam detection
 # If you have more than one webcam & your 1st/original webcam is occupied,
@@ -14,11 +15,16 @@ full_body_cascade = cv2.CascadeClassifier("data/haarcascade_fullbody.xml")
 video_capture = cv2.VideoCapture("subway.mp4")
 video_width = video_capture.get(3)
 video_height = video_capture.get(4)
+fps = video_capture.get(cv2.CAP_PROP_FPS) # 또는 cap.get(5)
+fourcc = cv2.VideoWriter_fourcc(*'DIVX') # 코덱 정의
+
+out = cv2.VideoWriter('otter_out.avi', fourcc, fps, (int(video_width), int(video_height))) # VideoWriter 객체 정의
+
 
 while True:
     ret, frame = video_capture.read()
 
-    frame = imutils.resize(frame, width=1000)  # resize original video for better viewing performance
+    # Bframe = imutils.resize(frame, width=1000)  # resize original video for better viewing performance
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)  # convert video to grayscale
 
     upper_body = haar_upper_body_cascade.detectMultiScale(
@@ -52,10 +58,13 @@ while True:
                     1)  # creates green color text with text size of 0.5 & thickness size of 2
     cv2.imshow('Video', frame)  # Display video
 
+    out.write(frame)
     # stop script when "q" key is pressed
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
+
 # Release capture
+out.release()
 video_capture.release()
 cv2.destroyAllWindows()
