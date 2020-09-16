@@ -37,6 +37,8 @@ def matchRoisFromFlow(old_roi, new_roi, tracks, step):
     return matched_tracks
 
 def main():
+
+
     # accepted commanline arguments. proto and model must point to valid files
     parser = argparse.ArgumentParser(description='Counting people in videos')
     parser.add_argument("--video", help="path to video file. If empty, camera's stream will be used")
@@ -51,6 +53,7 @@ def main():
 
     # run main counter
     PeopleCounter(args).run()
+
 
 # Stamped rectangle. Stores roi of detected person and stamp -
 # frame index when the dection occured
@@ -82,6 +85,8 @@ class PeopleCounter:
         else:
             # use webcam
             self.cap = cv.VideoCapture(0)
+
+        self.file = open("새파일.txt", 'w')
 
     def run(self):
         while True:
@@ -128,6 +133,7 @@ class PeopleCounter:
         self.cap.release()
         cv.destroyAllWindows()
         print('passed people: ', self.count_passed)
+        self.file.close()
 
     def count(self):
         """
@@ -178,6 +184,9 @@ class PeopleCounter:
                 continue
             # increase counters
             self.count_passed += 1
+            # 읽기쓰기
+            self.file.write(str(self.count_passed)+"\n")
+
 
     def visualise(self, frame):
         """
