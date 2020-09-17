@@ -11,14 +11,18 @@ import matplotlib.pyplot as plt
 from matplotlib.path import Path
 import matplotlib.patches as patches
 
+import cv2
+
 print('pytorch', torch.__version__)
 print('torchvision', torchvision.__version__)
 
-IMG_SIZE = 480
-THRESHOLD = 0.70
+HumanList = []
 
-img = Image.open('imgs/run.jpg')
-# img = img.resize((IMG_SIZE, int(img.height * IMG_SIZE / img.width)))
+IMG_SIZE = 480
+THRESHOLD = 0.45
+
+img = Image.open('imgs/Cafe.jpg')
+img = img.resize((IMG_SIZE, int(img.height * IMG_SIZE / img.width))) # 압축
 
 plt.figure(figsize=(16, 16))
 
@@ -27,7 +31,6 @@ plt.imshow(img)
 trf = T.Compose([
     T.ToTensor()
 ])
-
 
 input_img = trf(img)
 
@@ -39,8 +42,6 @@ out = model([input_img])[0]
 
 print(out.keys())
 
-
-
 codes = [
     Path.MOVETO,
     Path.LINETO,
@@ -48,7 +49,6 @@ codes = [
 ]
 
 fig, ax = plt.subplots(1, figsize=(16, 16))
-ax.imshow(img)
 
 
 for box, score, keypoints in zip(out['boxes'], out['scores'], out['keypoints']):
@@ -62,15 +62,16 @@ for box, score, keypoints in zip(out['boxes'], out['scores'], out['keypoints']):
 
     rect = patches.Rectangle((box[0], box[1]), box[2] - box[0], box[3] - box[1], linewidth=2, edgecolor='b',
                              facecolor='none')
+
     ax.add_patch(rect)
 
-    # 17 keypoints
-    for i, k in enumerate(keypoints):
-        circle = patches.Circle((k[0], k[1]), radius=10, facecolor='r')
-        ax.add_patch(circle)
-        print(k)
-        if i > 3:
-            break
+    # # 17 keypoints
+    # for i, k in enumerate(keypoints):
+    #     circle = patches.Circle((k[0], k[1]), radius=10, facecolor='r')
+    #     ax.add_patch(circle)
+    #     print(k)
+    #     if i > 3:
+    #         break
 
     # # draw path
     # # left arm
@@ -92,5 +93,7 @@ for box, score, keypoints in zip(out['boxes'], out['scores'], out['keypoints']):
     # path = Path(keypoints[12:17:2], codes)
     # line = patches.PathPatch(path, linewidth=2, facecolor='none', edgecolor='r')
     # ax.add_patch(line)
+
+ax.imshow(img.numpy())
 
 plt.show()
