@@ -1,7 +1,7 @@
 import os
 
 from flask import Flask, render_template
-from flask import send_file, request
+from flask import send_file, request, Response
 
 import mocking_data
 
@@ -30,6 +30,11 @@ def upload_processing():
     except Exception:
         print(Exception)
     return send_file(f_name, mimetype="image/png")
+
+@app.route('/upload-processing-test', methods=['post'])
+def upload_processing_test():
+    cnt = str(request.data)
+    return f"how many people : {cnt}"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
