@@ -186,7 +186,10 @@ class PeopleCounter:
             self.count_passed += 1
             # 읽기쓰기
             self.file.write(str(self.count_passed)+"\n")
+            
 
+    def get_count_passed(self):
+        return self.count_passed
 
     def visualise(self, frame):
         """
