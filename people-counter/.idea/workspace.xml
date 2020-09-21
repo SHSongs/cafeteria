@@ -1,7 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a74e8d8-cfd9-445f-a516-420cdcc421ba" name="Default Changelist" comment="" />
+    <list default="true" id="0a74e8d8-cfd9-445f-a516-420cdcc421ba" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H20.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H21.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H22.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H23.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H24.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H25.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H26.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H27.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H28.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H29.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H30.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H31.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H32.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H33.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H34.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H35.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H36.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H37.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H38.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H39.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H40.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H41.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H42.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H43.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H44.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H45.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/H9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/SaveImg.py" beforeDir="false" afterPath="$PROJECT_DIR$/../old/Pytorch/SaveImg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../old/Pytorch/vision.py" beforeDir="false" afterPath="$PROJECT_DIR$/../old/Pytorch/vision.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +69,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../old" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Teacher-Sensor" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
@@ -62,6 +111,7 @@
       <workItem from="1600167817837" duration="2182000" />
       <workItem from="1600242014880" duration="5325000" />
       <workItem from="1600329278092" duration="32000" />
+      <workItem from="1600647110382" duration="322000" />
     </task>
     <servers />
   </component>
@@ -79,10 +129,10 @@
     <state x="-1589" y="147" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.7.1536.832/0.0.1920.1040@-1920.7.1536.832" timestamp="1599962403036" />
     <state x="342" y="136" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1600248477294" />
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1536.832/-1080.-368.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1598168555937" />
-    <state x="592" y="218" key="FileChooserDialogImpl" timestamp="1600329307983">
+    <state x="592" y="218" key="FileChooserDialogImpl" timestamp="1600650842427">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="592" y="218" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1600329307983" />
+    <state x="592" y="218" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1600650842427" />
     <state x="740" y="275" key="FileChooserDialogImpl/1920.0.1536.832/-1080.-368.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1598168039584" />
     <state width="746" height="261" key="GridCell.Tab.0.bottom" timestamp="1600252385027">
       <screen x="0" y="0" width="1536" height="824" />

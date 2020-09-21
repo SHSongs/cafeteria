@@ -19,7 +19,7 @@ print('torchvision', torchvision.__version__)
 HumanList = []
 
 IMG_SIZE = 480
-THRESHOLD = 0.45
+THRESHOLD = 0.30
 
 img = Image.open('imgs/Cafe.jpg')
 img = img.resize((IMG_SIZE, int(img.height * IMG_SIZE / img.width))) # 압축

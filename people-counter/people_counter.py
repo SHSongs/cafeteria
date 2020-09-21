@@ -185,7 +185,7 @@ class PeopleCounter:
             # increase counters
             self.count_passed += 1
             # 읽기쓰기
-            self.file.write(str(self.count_passed)+"\n")
+            self.file.write(str(self.count_passed)+","+timestemp()+"\n")
 
 
     def visualise(self, frame):
