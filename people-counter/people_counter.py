@@ -4,6 +4,10 @@
 Counts people in videos
 """
 
+import os
+import requests
+import json
+
 import argparse
 import random
 import time
@@ -18,6 +22,22 @@ from people_detect import PeopleDetector
 from lucas_kanade import LucasKanadeTracker
 from common import draw_str, randColor
 
+def web_request(method_name, url, dict_data, is_urlencoded=True):
+    """Web GET or POST request를 호출 후 그 결과를 dict형으로 반환 """
+    method_name = method_name.upper() # 메소드이름을 대문자로 바꾼다 
+    if method_name not in ('GET', 'POST'):
+        raise Exception('method_name is GET or POST plz...')
+        
+    if method_name == 'GET': # GET방식인 경우
+        response = requests.get(url=url, params=dict_data)
+    elif method_name == 'POST': # POST방식인 경우
+        response = requests.post(url=url, data=json.dumps(dict_data), headers={'Content-Type': 'application/json'})
+    
+    dict_meta = {'status_code':response.status_code, 'ok':response.ok, 'encoding':response.encoding, 'Content-Type': response.headers['Content-Type']}
+    if 'json' in str(response.headers['Content-Type']): # JSON 형태인 경우
+        return {**dict_meta, **response.json()}
+    else: # 문자열 형태인 경우
+        return {**dict_meta, **{'text':response.text}}
 
 def matchRoisFromFlow(old_roi, new_roi, tracks, step):
     """
@@ -187,6 +207,16 @@ class PeopleCounter:
             self.count_passed += 1
             # 읽기쓰기
             self.file.write(str(self.count_passed)+","+datetime.datetime.today().strftime('%c')+"\n")
+
+            url  = 'http://localhost:5000/upload-processing-test' # 접속할 사이트주소 또는 IP주소를 입력한다
+            data = {'cnt': self.count_passed}         # 요청할 데이터
+            response = web_request(method_name='POST', url=url, dict_data=data)
+
+            print(response)
+            if response['ok'] == True:
+                print(response['text'])
+
+            #os.system("C:/cafeteria/server/templates/upload.html")
 
     def get_count_passed(self):
         return self.count_passed

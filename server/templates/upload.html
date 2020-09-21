@@ -9,26 +9,12 @@
 </head>
 
 <body>
-  <form action="/upload-processing" method="POST" enctype="multipart/form-data">
+  <!-- <form action="/upload-processing-test" method="POST" enctype="multipart/form-data">
     <label>Select image</label>
     <input type="file" name="file" id="file" />
-    <button type="submit" onclick="upload()">Upload</button>
-  </form>
+    <button type="submit">Upload</button>
+  </form> -->
 
-  <script>
-    function upload() {
-      var formData = new FormData();
-      var imagefile = document.querySelector('#file');
-      formData.append("image", imagefile.files[0]);
-      axios.post('/upload-processing', formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data'
-        }
-      }).then((res) => {
-        console.log("done")
-      })
-    }
-  </script>
 </body>
 
 </html>
