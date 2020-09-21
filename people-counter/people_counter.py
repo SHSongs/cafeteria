@@ -7,6 +7,7 @@ Counts people in videos
 import argparse
 import random
 import time
+import datetime
 from collections import namedtuple
 
 # numpy and OpenCV required
@@ -185,12 +186,7 @@ class PeopleCounter:
             # increase counters
             self.count_passed += 1
             # 읽기쓰기
-<<<<<<< HEAD
-            self.file.write(str(self.count_passed)+"\n")
-            
-=======
-            self.file.write(str(self.count_passed)+","+timestemp()+"\n")
->>>>>>> edf40cc8128abc5205594531773d10749040038b
+            self.file.write(str(self.count_passed)+","+datetime.datetime.today().strftime('%c')+"\n")
 
     def get_count_passed(self):
         return self.count_passed
