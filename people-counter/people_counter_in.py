@@ -209,12 +209,10 @@ class PeopleCounter:
             self.file.write(str(self.count_passed)+","+datetime.datetime.today().strftime('%c')+"\n")
 
             url  = 'http://localhost:5000/upload-processing-test' # 접속할 사이트주소 또는 IP주소를 입력한다
-            data = {'cnt': self.count_passed}         # 요청할 데이터
-            response = web_request(method_name='POST', url=url, dict_data=data)
+            data = {'cnt_in': self.count_passed, 'entrance': 'in'}         # 요청할 데이터
+            response = requests.post(url=url, data=json.dumps(data), headers={'Content-Type': 'application/json'})
 
-            print(response)
-            if response['ok'] == True:
-                print(response['text'])
+            print(response.text)
 
             #os.system("C:/cafeteria/server/templates/upload.html")
 

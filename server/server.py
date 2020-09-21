@@ -1,4 +1,5 @@
 import os
+import json
 
 from flask import Flask, render_template
 from flask import send_file, request, Response
@@ -34,7 +35,9 @@ def upload_processing():
 @app.route('/upload-processing-test', methods=['post'])
 def upload_processing_test():
     cnt = str(request.data)
-    return f"how many people : {cnt}"
+    # my_json = json.loads(cnt)
+    # print(my_json)
+    return f"how many people : {cnt}\n remain seats : "
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
