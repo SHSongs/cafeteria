@@ -205,6 +205,7 @@ class PeopleCounter:
                 continue
             # increase counters
             self.count_passed += 1
+
             # 읽기쓰기
             self.file.write(str(self.count_passed)+","+datetime.datetime.today().strftime('%c')+"entrance : 입구 "+"\n")
 
