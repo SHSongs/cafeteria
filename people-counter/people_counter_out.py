@@ -208,7 +208,7 @@ class PeopleCounter:
             # 읽기쓰기
             self.file.write(str(self.count_passed)+","+datetime.datetime.today().strftime('%c')+"entrance : 출구"+"\n")
 
-            url  = 'http://localhost:5000/upload-processing-test' # 접속할 사이트주소 또는 IP주소를 입력한다
+            url  = 'http://10.120.72.140:5000/upload-processing-test' # 접속할 사이트주소 또는 IP주소를 입력한다
             data = {'cnt_out': self.count_passed, 'entrance': 'out'}         # 요청할 데이터
             response = requests.post(url=url, data=json.dumps(data), headers={'Content-Type': 'application/json'})
 

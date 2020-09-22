@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a74e8d8-cfd9-445f-a516-420cdcc421ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../server/.idea/server.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/../server/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/t.py" beforeDir="false" afterPath="$PROJECT_DIR$/../server/t.py" afterDir="false" />
-    </list>
+    <list default="true" id="0a74e8d8-cfd9-445f-a516-420cdcc421ba" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
