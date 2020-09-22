@@ -18,9 +18,9 @@ while True:
 
     i_name = "img" + str(cnt) + ".jpg"
 
-    cv2.imwrite('images/'+i_name, frame)
+    cv2.imwrite('C:/cafeteria/server/images/'+i_name, frame)
     time.sleep(5)
-    files = {'image': open('images/' + i_name, 'rb')}
+    files = {'image': open('C:/cafeteria/server/images/' + i_name, 'rb')}
     response = requests.request("POST", url, files=files, headers=headers)
 
     print(response.text)

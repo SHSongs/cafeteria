@@ -64,7 +64,7 @@ def cafeteria_state():
 
 @app.route('/img', methods=['get', 'post'])
 def img():
-    filename = "C:/cafeteria/people-counter/images/"+"img"+str(get_current())+".jpg"
+    filename = "C:/cafeteria/server/images/"+"img"+str(get_current())+".jpg"
     return send_file(filename, mimetype='image/png')
 
 def up_current():
