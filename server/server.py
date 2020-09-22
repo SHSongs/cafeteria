@@ -34,10 +34,18 @@ def upload_processing():
 
 @app.route('/upload-processing-test', methods=['post'])
 def upload_processing_test():
-    cnt = str(request.data)
-    # my_json = json.loads(cnt)
-    # print(my_json)
-    return f"how many people : {cnt}\n remain seats : "
+    seat = 104
+
+    post = request.data
+    my_json = json.loads(post)
+    print(my_json)
+
+    if my_json['entrance'] == 'in':
+        seat = seat - int(my_json['cnt_in'])
+    elif my_json['entrance'] == 'out':
+        seat = seat + int(my_json['cnt_out'])
+    
+    return f"json 정보 사람수, 입구출구 여부 : {my_json}\n잔여 좌석 : {seat}"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')

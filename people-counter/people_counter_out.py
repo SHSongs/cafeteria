@@ -206,7 +206,7 @@ class PeopleCounter:
             # increase counters
             self.count_passed += 1
             # 읽기쓰기
-            self.file.write(str(self.count_passed)+","+datetime.datetime.today().strftime('%c')+"\n")
+            self.file.write(str(self.count_passed)+","+datetime.datetime.today().strftime('%c')+"entrance : 출구"+"\n")
 
             url  = 'http://localhost:5000/upload-processing-test' # 접속할 사이트주소 또는 IP주소를 입력한다
             data = {'cnt_out': self.count_passed, 'entrance': 'out'}         # 요청할 데이터
