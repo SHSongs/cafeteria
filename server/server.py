@@ -47,5 +47,29 @@ def upload_processing_test():
     
     return f"json 정보 사람수, 입구출구 여부 : {my_json}\n잔여 좌석 : {seat}"
 
+current = 0
+
+@app.route('/capture', methods=['post'])
+def capture():
+    up_current()
+    return "done"
+
+@app.route('/cafeteria_state', methods=['get', 'post'])
+def cafeteria_state():
+    return render_template('cafeteria_state.html')
+
+@app.route('/img', methods=['get', 'post'])
+def img():
+    filename = "C:/cafeteria/people-counter/"+"img"+str(get_current())+".jpg"
+    return send_file(filename, mimetype='image/png')
+
+def up_current():
+    global current
+    current += 1
+
+def get_current():
+    global current
+    return current
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
