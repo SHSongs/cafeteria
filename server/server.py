@@ -32,19 +32,23 @@ def upload_processing():
         print(Exception)
     return send_file(f_name, mimetype="image/png")
 
+seat = 104
+
 @app.route('/upload-processing-test', methods=['post'])
 def upload_processing_test():
-    seat = 104
-
+    global seat
     post = request.data
     my_json = json.loads(post)
     print(my_json)
 
     if my_json['entrance'] == 'in':
-        seat = seat - int(my_json['cnt_in'])
+        seat = seat - 1
     elif my_json['entrance'] == 'out':
-        seat = seat + int(my_json['cnt_out'])
+        seat = seat + 1
     
+    file = open("seat.txt", 'w')
+    file.write(str(seat))
+    file.close()
     return f"json 정보 사람수, 입구출구 여부 : {my_json}\n잔여 좌석 : {seat}"
 
 current = 0
@@ -60,7 +64,7 @@ def cafeteria_state():
 
 @app.route('/img', methods=['get', 'post'])
 def img():
-    filename = "C:/cafeteria/people-counter/"+"img"+str(get_current())+".jpg"
+    filename = "C:/cafeteria/people-counter/images/"+"img"+str(get_current())+".jpg"
     return send_file(filename, mimetype='image/png')
 
 def up_current():

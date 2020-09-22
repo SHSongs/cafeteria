@@ -1,15 +1,23 @@
-import json
+# import json
 
-# cnt = b'{"cnt_in": 3, "entrance": "in"}'
-# my_json = json.loads(cnt)
-# print(my_json['entrance'])
+# # cnt = b'{"cnt_in": 3, "entrance": "in"}'
+# # my_json = json.loads(cnt)
+# # print(my_json['entrance'])
 
-current = 0
+# current = 0
 
-def current_up():
-    global current
-    return current
+# def current_up():
+#     global current
+#     return current
 
-current_up()
+# current_up()
 
-print(current)
+# print(current)
+
+import time
+
+for i in range(10):
+    file = open("새.txt", 'a')
+    file.write("a")
+    file.close()
+    time.sleep(1)
