@@ -12,7 +12,11 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('!급식실 줄'):
-                await message.channel.send(file=discord.File('./server/images/cafeteria.png'))
+    file = open("C:/cafeteria/people-counter/cnt.txt", 'r')
+    cnt = int(file.read())
+    file.close()
 
-client.run('NzU3NDY4MjkzMDIzMDA2Nzkx.X2g1Ug.BvxaueB0ofAVapbYguURYPRRU20')
+    if message.content.startswith('!급식실 줄'):
+                await message.channel.send(file=discord.File('C:/cafeteria/server/images/img'+str(cnt)+'.jpg'))
+
+client.run('NzU3NDY4MjkzMDIzMDA2Nzkx.X2g1Ug.QpSN2n1-LvzrtXy8HAJb56dzEXg')

@@ -18,6 +18,10 @@ while True:
 
     i_name = "img" + str(cnt) + ".jpg"
 
+    file = open("cnt.txt", 'w')
+    file.write(str(cnt))
+    file.close()
+
     cv2.imwrite('C:/cafeteria/server/images/'+i_name, frame)
     time.sleep(5)
     files = {'image': open('C:/cafeteria/server/images/' + i_name, 'rb')}
