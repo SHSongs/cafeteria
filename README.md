@@ -4,7 +4,7 @@ gsm cafeteria
 
 현재 문제점  
 급식을 먹기 위해 대기하는 줄  
-![WaitPeople](WaitPeople.png)  
+![WaitPeople](waitpeople.png)  
 
 부족한 식탁 개수
 ![sittingPeople](sittingpeople.png)  
