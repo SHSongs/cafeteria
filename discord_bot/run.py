@@ -19,4 +19,4 @@ async def on_message(message):
     if message.content.startswith('!급식실 줄'):
                 await message.channel.send(file=discord.File('C:/cafeteria/server/images/img'+str(cnt)+'.jpg'))
 
-client.run('NzU3NDY4MjkzMDIzMDA2Nzkx.X2g1Ug.QpSN2n1-LvzrtXy8HAJb56dzEXg')
+client.run('')
